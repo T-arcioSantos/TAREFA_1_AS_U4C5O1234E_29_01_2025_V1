@@ -28,4 +28,8 @@ pico_set_program_name(TAREFA_1_AS_U4C5O1234E_29_01_2025_V1 "TAREFA_1_AS_U4C5O123
 target_link_libraries(TAREFA_1_AS_U4C5O1234E_29_01_2025_V1 pico_stdlib)
 pico_add_extra_outputs(TAREFA_1_AS_U4C5O1234E_29_01_2025_V1)
 
+pico_enable_stdio_uart(TAREFA_1_AS_U4C5O1234E_29_01_2025_V1 1)
+pico_enable_stdio_usb(TAREFA_1_AS_U4C5O1234E_29_01_2025_V1 1)
+
+
 
