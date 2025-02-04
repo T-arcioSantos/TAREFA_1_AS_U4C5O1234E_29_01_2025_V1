@@ -1,0 +1,76 @@
+{
+    "version": 1,
+    "author": "Tárcio Santos",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "board-pi-pico-w",
+        "id": "pico",
+        "top": 15.95,
+        "left": -207.65,
+        "attrs": { "builder": "pico-sdk" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led1",
+        "top": 104.8,
+        "left": -353.8,
+        "rotate": 270,
+        "attrs": { "color": "limegreen" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led2",
+        "top": 47.2,
+        "left": -353.8,
+        "rotate": 270,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led3",
+        "top": 76,
+        "left": -353.8,
+        "rotate": 270,
+        "attrs": { "color": "yellow" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r3",
+        "top": 244.8,
+        "left": -326.95,
+        "rotate": 90,
+        "attrs": { "value": "300" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 244.8,
+        "left": -355.75,
+        "rotate": 90,
+        "attrs": { "value": "300" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r2",
+        "top": 244.8,
+        "left": -384.55,
+        "rotate": 90,
+        "attrs": { "value": "300" }
+      }
+    ],
+    "connections": [
+      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      [ "pico:GP12", "led3:A", "red", [ "h-19.2", "v0.04", "h-28.8", "v-76.8" ] ],
+      [ "led1:A", "pico:GP11", "red", [ "h105.6", "v38.4" ] ],
+      [ "led2:A", "pico:GP13", "red", [ "h48", "v115.16" ] ],
+      [ "pico:GND.4", "r3:2", "black", [ "h-28.8", "v97.24" ] ],
+      [ "pico:GND.4", "r1:2", "black", [ "h-28.8", "v97.24" ] ],
+      [ "pico:GND.4", "r2:2", "black", [ "h-28.8", "v97.24" ] ],
+      [ "r2:1", "led2:C", "black", [ "v-48", "h48", "v-95.6" ] ],
+      [ "r1:1", "led3:C", "black", [ "v-28.8", "h28.8", "v-86" ] ],
+      [ "r3:1", "led1:C", "black", [ "h19.2", "v-86" ] ]
+    ],
+    "dependencies": {}
+  }
